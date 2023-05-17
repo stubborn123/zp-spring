@@ -4,6 +4,10 @@
 
 ## 具体步骤
 
+创建IoC容器
+
+IoC 容器，也就是 BeanFactory，存在的意义就是将创建对象与使用对象的业务代码解耦，让业务开发人员无需关注底层对象（Bean）的构建和生命周期管理，专注于业务开发。
+
 （1）定义BeanDefinition
 
 BeanDefinition是Spring容器中最基本的组成部分之一.
