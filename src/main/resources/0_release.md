@@ -22,3 +22,6 @@ BeanDefinition是Spring容器中最基本的组成部分之一.
 （2）创建ClassPathXmlApplicationContext
 ClassPathXmlApplicationContext现在比较简单的，这里其实对应的是ApplicationContext和BeanFactory的结合体
 后面会对这个进行拆解扩展，分成两个主要部分
+
+（3）定义BeansException
+这里主要是针对容器出现的异常进行一个管理

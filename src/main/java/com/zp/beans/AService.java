@@ -1,4 +1,4 @@
-package com.zp.test;
+package com.zp.beans;
 
 /**
  * @Author: zhangpeng

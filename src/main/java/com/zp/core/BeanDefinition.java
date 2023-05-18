@@ -1,4 +1,4 @@
-package com.zp;
+package com.zp.core;
 
 /**
  * @Author: zhangpeng
