@@ -26,6 +26,8 @@ public class ClassPathXmlApplicationContext {
         this.readXml(fileName);
         this.instanceBeans();
     }
+
+    //解析XML配置文件
     private void readXml(String fileName) {
         SAXReader saxReader = new SAXReader();
         try {

@@ -18,3 +18,7 @@ BeanDefinition是Spring容器中最基本的组成部分之一.
 4. 支持AOP：通过BeanDefinition，Spring容器可以知道如何为一个Bean添加AOP代理，包括使用哪种AOP技术、为哪些方法添加代理等等。
 
 帮助Spring容器完成Bean的实例化、配置、管理和AOP等任务
+
+（2）创建ClassPathXmlApplicationContext
+ClassPathXmlApplicationContext现在比较简单的，这里其实对应的是ApplicationContext和BeanFactory的结合体
+后面会对这个进行拆解扩展，分成两个主要部分
