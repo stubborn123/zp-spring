@@ -1,7 +1,7 @@
-package com.zp;
+package com.zp.test;
 
 import com.zp.beans.AService;
-import com.zp.context.ClassPathXmlApplicationContext;
+import com.zp.context.ClassPathXmlApplicationContext01;
 
 /**
  * @Author: zhangpeng
@@ -12,7 +12,7 @@ public class Application {
 
     public static void main(String[] args) {
         //这里用的是相对路径，自动去src/main/resources去找配置文件
-        ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("config/beans.xml");
+        ClassPathXmlApplicationContext01 ctx = new ClassPathXmlApplicationContext01("config/beans.xml");
         AService aService = (AService)ctx.getBean("aservice");
         aService.sayHello();
     }

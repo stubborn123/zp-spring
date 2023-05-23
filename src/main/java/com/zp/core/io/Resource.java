@@ -1,4 +1,4 @@
-package com.zp;
+package com.zp.core.io;
 
 import java.util.Iterator;
 

@@ -1,4 +1,4 @@
-package com.zp;
+package com.zp.core;
 
 /**
  * @Author: zhangpeng
@@ -18,5 +18,9 @@ public class BeansException extends Exception {
 
     public BeansException(String msg) {
         super(msg);
+    }
+
+    public BeansException() {
+
     }
 }

@@ -1,4 +1,4 @@
-package com.zp;
+package com.zp.core.io;
 
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
@@ -10,7 +10,11 @@ import java.util.Iterator;
 
 /**
  * @Author: zhangpeng
- * @Description:
+ * @Description: XML 资源实现
+ * （1）继承Resource，方便扩展
+ * （2）将解析XML文件，输入，方法以及输出结果抽取出来方便管理
+ * （3）与ClassPathXmlApplicationContext解耦（对比ClassPathXmlApplicationContext01），ClassPathXmlApplicationContext只关注采用的什么BeanFactory和什么Resource即可
+ *
  * @Date: 2023/5/22
  */
 public class ClassPathXmlResource implements Resource{

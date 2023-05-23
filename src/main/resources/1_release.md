@@ -30,3 +30,18 @@ XmlBeanDefinitionReader
 将解析XML文件做转换，转换成我们需要的BeanDefinition
 在 XmlBeanDefinitionReader 中，有一个 loadBeanDefinitions 方法会把解析的 XML 内容转换成 BeanDefinition，
 并加载到 BeanFactory 中。
+
+### BeanFactory 功能扩展
+
+### Resource
+
+### 改造ApplicatoinContext
+对比之前的ClassPathXmlApplicationContext（也就是现在的ClassPathXmlApplicationContext01）
+
+改造：
+（1）引入BeanFactory和Resource概念，
+一个专注注册bean和获取bean，一个专注资源，根据不同的资源的解析转换封装，方便后面注册bean，解耦ApplicationContext，并提高了扩展性
+（3）根据BeanFactory和Resource接口定义实现类
+根据XML文件读取解析，来是想一个对应处理BeanFactory和封装Resource的实现类
+（2）重新设计ApplicationContext
+只关注采用什么Resource和BeanFactory即可，将之前的很多逻辑分离出去

@@ -1,6 +1,6 @@
-package com.zp;
+package com.zp.core;
 
-import com.zp.core.BeanDefinition;
+import com.zp.core.io.Resource;
 import org.dom4j.Element;
 
 /**
