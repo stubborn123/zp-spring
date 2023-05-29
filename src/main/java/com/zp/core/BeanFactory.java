@@ -12,5 +12,9 @@ import com.zp.core.BeansException;
 
 public interface BeanFactory {
     Object getBean(String beanName) throws BeansException;
-    void registerBeanDefinition(BeanDefinition beanDefinition);
+    //void registerBeanDefinition(BeanDefinition beanDefinition);
+
+    //Boolean registerBean(String beanName, Object obj);
+
+    Boolean containsBean(String name);
 }
