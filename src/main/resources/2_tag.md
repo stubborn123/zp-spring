@@ -12,16 +12,27 @@ IOC容器的增强
 
 
 
-单例整改
+### 单例整改
 单例有助于系统的维护，方便管理
-改造的方式分为两部分
-（1）BeanFactory其实改动不大，修改一下注册的方法和参数
+改造的方式分为两部分<br>
+（1）BeanFactory其实改动不大，修改一下注册的方法和参数<br>
 （2）定义SingletonBeanRegistry接口，规范单例bean的方法
 
 在这两个基础上实现SingletonBeanRegistry接口DefaultSingletonBeanRegistry
-重新改写SimpleBeanFactory
+重新改写SimpleBeanFactory<br>
+
 
 DefaultSingletonBeanRegistry是作为默认实现，同样后面可以自定义其他的单例实现替换扩展
 改写SimpleBeanFactory在实现BeanFactory基础上，继承DefaultSingletonBeanRegistry。
-将单例操作交给DefaultSingletonBeanRegistry来处理，自己只负责整合。
+将单例操作交给DefaultSingletonBeanRegistry来处理，自己只负责整合。<br>
 这样就做到对bean的操作和单例的实现解耦。
+
+### 增加事件监听
+创建ApplicationEvent 和 ApplicationEventPublisher
+
+ApplicationEventPublisher是一个发布接口
+
+ApplicationEvent是监听事件（继承了 Java 工具包内的 EventObject，后面可以解耦）
+
+### 注入
+Field 注入、Setter 注入和构造器（Constructor）注入
