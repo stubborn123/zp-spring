@@ -36,3 +36,16 @@ ApplicationEvent是监听事件（继承了 Java 工具包内的 EventObject，�
 
 ### 注入
 Field 注入、Setter 注入和构造器（Constructor）注入
+
+属性类： ArgumentValue 和 PropertyValue  （参数值和属性值）
+对应的管理单独创建类ArgumentValues 和 PropertyValues
+
+
+扩展BeanDefinition
+在id和className以外，我们还要加一些别的属性来丰富
+scope 表示是单例模式还是原型模式
+lazyInit 是不是要懒加载（要不要在bean加载的时候初始化）
+dependsOn 记录依赖关系
+constructorArgumentValues 构造器参数
+propertyValues 属性
+initMethodName 初始化方法名称

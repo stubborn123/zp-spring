@@ -12,6 +12,15 @@ public class PropertyValue {
     public PropertyValue(String name, Object value) {
         this.name = name;
         this.value = value;
-    } //省略getter
+    }
 
- }
+    //只有get，因为是final所以不能set
+    public String getName() {
+        return name;
+    }
+
+    public Object getValue() {
+        return value;
+    }
+
+}
