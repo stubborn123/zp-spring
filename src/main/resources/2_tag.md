@@ -49,3 +49,10 @@ dependsOn 记录依赖关系
 constructorArgumentValues 构造器参数
 propertyValues 属性
 initMethodName 初始化方法名称
+
+新增BeanDefinitionRegistry接口来管理BeanDefinition的行为，先定义4个常用的接口方法
+： register、remove、get、contains
+
+BeanFactory 增加Singleton，Prototype的单例还是原型的判断，以及获取对应的类型
+
+ClassPathXmlApplicationContext 要多实现事件接口

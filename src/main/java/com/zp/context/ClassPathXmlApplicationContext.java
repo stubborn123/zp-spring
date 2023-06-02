@@ -15,24 +15,18 @@ import com.zp.core.io.Resource;
  * （4）改造ClassPathXmlApplicationContext，通过调用BeanFactory来处理
  * @Date: 2023/5/23
  */
-public class ClassPathXmlApplicationContext implements BeanFactory {
-    BeanFactory beanFactory;
 
-    public ClassPathXmlApplicationContext(String fileName){
-        Resource res = new ClassPathXmlResource(fileName);
-        BeanFactory bf = new SimpleBeanFactory();
-        XmlBeanDefinitionReader reader = new XmlBeanDefinitionReader(bf);
-        reader.loadBeanDefinitions(res);
-        this.beanFactory = bf;
+public class ClassPathXmlApplicationContext implements BeanFactory,
+        ApplicationEventPublisher{
+    public void publishEvent(ApplicationEvent event) {
     }
-
-    @Override
-    public Object getBean(String beanName) throws BeansException {
-        return this.beanFactory.getBean(beanName);
+    public boolean isSingleton(String name) {
+        return false;
     }
-
-    public Boolean containsBean(String name) { return this.beanFactory.containsBean(name);}
-//    public void registerBean(String beanName, Object obj) { this.beanFactory.registerBean(beanName, obj);}
-
-
+    public boolean isPrototype(String name) {
+        return false;
+    }
+    public Class<?> getType(String name) {
+        return null;
+    }
 }
